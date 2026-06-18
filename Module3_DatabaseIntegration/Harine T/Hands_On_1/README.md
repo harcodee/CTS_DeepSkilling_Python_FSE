@@ -52,7 +52,4 @@ This project implements the **Student Course Registration System** database usin
 * Database normalization (1NF, 2NF, 3NF)
 * Schema modification using ALTER TABLE
 
-## Author
 
-Harine T
-Python Full Stack Engineer – Digital Nurture 5.0
