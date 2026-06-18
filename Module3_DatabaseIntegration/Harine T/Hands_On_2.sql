@@ -159,5 +159,3 @@ LEFT JOIN professors p ON d.department_id = p.department_id;
  
  
  
- 
- 
