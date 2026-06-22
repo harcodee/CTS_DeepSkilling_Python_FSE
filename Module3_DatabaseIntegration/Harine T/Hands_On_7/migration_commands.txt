@@ -1,0 +1,106 @@
+# ==========================================
+# Task 92
+# Initialize Alembic
+# ==========================================
+alembic init migrations
+
+# ==========================================
+# Task 93
+# Configure alembic.ini
+# ==========================================
+# Set:
+# sqlalchemy.url = mysql+mysqlconnector://root:YOUR_PASSWORD@localhost/college_db_orm
+
+# ==========================================
+# Task 94
+# Configure env.py
+# ==========================================
+# Import Base from models.py
+# Set:
+# target_metadata = Base.metadata
+
+# ==========================================
+# Task 95
+# Generate Initial Migration
+# ==========================================
+alembic revision --autogenerate -m "Initial Schema"
+
+# ==========================================
+# Task 96
+# Inspect Generated Migration
+# ==========================================
+# Open migrations/versions/*.py and verify upgrade() and downgrade()
+
+# ==========================================
+# Task 97
+# Apply Migration
+# ==========================================
+alembic upgrade head
+
+# ==========================================
+# Task 98
+# Add is_active column to Student model
+# ==========================================
+# Modify models.py
+
+# ==========================================
+# Task 99
+# Generate Migration
+# ==========================================
+alembic revision --autogenerate -m "Add is_active"
+
+# ==========================================
+# Task 100
+# Inspect Migration File
+# ==========================================
+# Verify upgrade() adds the column
+# Verify downgrade() removes it
+
+# ==========================================
+# Task 101
+# Apply Migration
+# ==========================================
+alembic upgrade head
+
+# ==========================================
+# Task 102
+# Add CourseSchedule model
+# ==========================================
+# Modify models.py
+alembic revision --autogenerate -m "Add CourseSchedule"
+alembic upgrade head
+
+# ==========================================
+# Task 103
+# View Migration History
+# ==========================================
+alembic history --verbose
+
+# ==========================================
+# Task 104
+# View Current Revision
+# ==========================================
+alembic current
+
+# ==========================================
+# Task 105
+# Rollback One Revision
+# ==========================================
+alembic downgrade -1
+
+# ==========================================
+# Task 106
+# Rollback to Base
+# ==========================================
+alembic downgrade base
+
+# ==========================================
+# Task 107
+# Reapply All Migrations
+# ==========================================
+alembic upgrade head
+
+# ==========================================
+# Task 108 (Bonus - Django)
+# Not Implemented
+# ==========================================
