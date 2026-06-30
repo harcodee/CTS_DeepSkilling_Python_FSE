@@ -1,16 +1,14 @@
-from django.urls import path
-from .views import CourseListView, CourseDetailView
+from rest_framework.routers import DefaultRouter
+from .views import (
+    CourseViewSet,
+    StudentViewSet,
+    EnrollmentViewSet,
+)
 
-urlpatterns = [
+router = DefaultRouter()
 
-    path(
-        "courses/",
-        CourseListView.as_view(),
-    ),
+router.register(r'courses', CourseViewSet, basename='courses')
+router.register(r'students', StudentViewSet, basename='students')
+router.register(r'enrollments', EnrollmentViewSet, basename='enrollments')
 
-    path(
-        "courses/<int:pk>/",
-        CourseDetailView.as_view(),
-    ),
-
-]
+urlpatterns = router.urls
